@@ -6,11 +6,14 @@ Site onde pessoas podem fazer upload de arquivos. ALém disso, permite pequisa, 
 
 REQUISITOS PRELIMINARES
 
-- Ideia para front-end: HTML5, Bootstrap e CSS
-- Ideia para back-end: fazer o projeto em PHP e usar MySQL e AJAX.
 - Servidor para hosting do sistema e disponibilização do mesmo ao público geral;
 - Sistema de banco de dados para facilitar o armazenamento de contas, arquivos, comentários e avaliações.
 
+RECURSOS FERRAMENTAIS
+
+- Ideia para front-end: HTML5, Bootstrap e CSS;
+- Ideia para back-end: fazer o projeto em PHP e usar MySQL e AJAX;
+- Aplicativo para gerenciamento de projeto: Trello.
 
 CASOS DE USO
 
