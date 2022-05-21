@@ -6,7 +6,6 @@ Site onde pessoas podem fazer upload de arquivos. ALém disso, permite pequisa, 
 
 REQUISITOS PRELIMINARES
 
-- Interação: poder interagir com o disponibilizador do arquivo e avaliar o upload;
 - Servidor para hosting do sistema e disponibilização do mesmo ao público geral;
 - Sistema de banco de dados para facilitar o armazenamento de contas, arquivos, comentários e avaliações.
 
