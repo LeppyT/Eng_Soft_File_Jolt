@@ -7,7 +7,6 @@ Site onde pessoas podem fazer upload de arquivos. ALém disso, permite pequisa, 
 REQUISITOS PRELIMINARES
 
 - Servidor para hosting do sistema e disponibilização do mesmo ao público geral;
-- Framework para facilitar o processo de integração do Front-end com o Back-end;
 - Sistema de banco de dados para facilitar o armazenamento de contas, arquivos, comentários e avaliações.
 
 
