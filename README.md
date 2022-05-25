@@ -15,7 +15,7 @@ Site onde pessoas podem fazer upload de arquivos. ALém disso, permite pequisa, 
 - Ideia para back-end: fazer o projeto em PHP e usar MySQL e AJAX;
 - Criação de diagramas: Diagrams.net;
 - Aplicativo para gerenciamento de projeto: Trello.
-( Link: https://trello.com/b/fcp1pqbr/atividades).
+(https://trello.com/b/fcp1pqbr/atividades).
 
 ## CASOS DE USO
 
