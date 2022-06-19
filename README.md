@@ -21,3 +21,6 @@ Site onde pessoas podem fazer upload de arquivos. ALém disso, permite pequisa, 
 
 Definidos em arquivo próprio presente no repositório:
 
+## PROTÓTIPO DE INTERFACE
+
+Feito no Figma: https://www.figma.com/file/fUr36ObBqvMpr7OWT1FGoY/File-Jolt?node-id=0%3A1
