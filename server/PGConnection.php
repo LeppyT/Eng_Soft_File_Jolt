@@ -1,9 +1,9 @@
 <?php
 
-    require_once 'config.php';
+    require_once '/var/www/secrets.php';
 
     try {
-        $dsn = "pgsql:host=$host;port=$port;dbname=$db;charset=utf8mb4";
+        $dsn = "pgsql:host=$host;port=$port;dbname=$db";
 
         $options = [
             PDO::ATTR_EMULATE_PREPARES => false, // desativa a execução emulada de prepared statements
