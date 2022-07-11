@@ -1,0 +1,39 @@
+body {
+    margin: 0 auto;
+    padding: 0%;
+}
+
+nav {
+    background: #222;
+    position: fixed;
+}
+
+nav img {
+    width: 100px;
+}
+
+.form-control {
+    width: 1000px;
+}
+
+main {
+    background: #444;
+    padding-top: 5%;
+}
+
+#files {
+    margin-top: 5%;
+    padding-top: 2%;
+    background: #333;
+    color: azure;
+}
+
+.footer {
+    text-align: center;
+    background-color: #222;
+    color: azure;
+    font-weight: bolder;
+    padding: 1%;
+    bottom: 0;
+    width: 100%;
+}
