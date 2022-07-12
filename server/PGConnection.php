@@ -14,12 +14,16 @@
             ];
 
             // make a database connection
-            return new PDO(
+            $Conn = new PDO(
                 $dsn,
                 $user,
                 $password,
                 $options
             );
+
+            $Conn->exec('SET search_path TO fileJolt');
+
+            return $Conn
         } catch (PDOException $e) {
             die($e->getMessage());
         }
