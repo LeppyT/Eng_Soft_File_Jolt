@@ -7,7 +7,6 @@
     FROM usuario
     SQL;
 
-    $pdo->exec('SET search_path TO fileJolt');
     $stmt = $pdo->query($sql);
     $users = array();
 
@@ -15,7 +14,8 @@
         $users[] = $row;
     }
 
-    return json_encode($users);
+    header('Content-type: application/json');
+    echo json_encode($users);
 
     /*<?php
     // Your code here!
