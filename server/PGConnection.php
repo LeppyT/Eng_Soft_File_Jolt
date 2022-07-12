@@ -21,7 +21,6 @@
                 $options
             );
 
-            $Conn->exec('SET search_path TO fileJolt');
 
             return $Conn;
         } catch (PDOException $e) {
