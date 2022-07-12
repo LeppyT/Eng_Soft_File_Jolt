@@ -23,7 +23,7 @@
 
             $Conn->exec('SET search_path TO fileJolt');
 
-            return $Conn
+            return $Conn;
         } catch (PDOException $e) {
             die($e->getMessage());
         }
