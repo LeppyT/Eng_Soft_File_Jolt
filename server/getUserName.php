@@ -7,6 +7,7 @@
     FROM usuario
     SQL;
 
+    $pdo->exec('SET search_path TO fileJolt');
     $stmt = $pdo->query($sql);
     $users = array();
 
