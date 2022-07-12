@@ -11,7 +11,7 @@
     $users = array();
 
     while($row = $stmt->fetch()){
-        $users[] = $row
+        $users[] = $row;
     }
 
     return json_encode($users);
@@ -38,4 +38,4 @@
             echo $users[$count];
             $count++;
     }*/
-?>*/
+?>
