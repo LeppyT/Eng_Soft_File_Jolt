@@ -2,13 +2,8 @@
     $pdo = require '../../PGConnection.php';
 
     $arquivos = array();
-    $times = array();
-    $downloads = array();
-    $votes = array();
 
-    $time = $_GET["time"] ?? "";
-    $download = $_GET["downloads"] ?? "";
-    $vote = $_GET["votes"] ?? "";
+    $type = $_GET["feature-type"] ?? "";
 
     $sql_time = <<<SQL
                 SELECT * FROM arquivo
@@ -27,34 +22,29 @@
                 ORDER BY nota DESC;
                 SQL;
 
-    if($time != ""){
+    if($type == "time"){
         $stmt = $pdo->query($sql_time);
 
         while($row = $stmt->fetch()){
-            $times[] = $row;
+            $arquivos[] = $row;
         }
 
-        $arquivos[] = $times;
-    }
-
-    if($download != ""){
+    } else if($type == "downloads"){
         $stmt = $pdo->query($sql_downloads);
 
         while($row = $stmt->fetch()){
-            $downloads[] = $row;
+            $arquivos[] = $row;
         }
 
-        $arquivos[] = $downloads;
-    }
-
-    if($vote != ""){
+    } else if($type == "votes"){
         $stmt = $pdo->query($sql_votes);
 
         while($row = $stmt->fetch()){
-            $votes[] = $row;
+            $arquivos[] = $row;
         }
 
-        $arquivos[] = $votes;
+    } else{
+        $arquivos[] = "Input Error!";
     }
 
 
