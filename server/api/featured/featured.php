@@ -1,4 +1,6 @@
 <?php
+    header('Access-Control-Allow-Origin: *');
+
     $pdo = require '../../PGConnection.php';
 
     $arquivos = array();
