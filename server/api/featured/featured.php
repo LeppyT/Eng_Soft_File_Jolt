@@ -18,8 +18,9 @@
                     SQL;
 
     $sql_votes = <<<SQL
-                SELECT * 
-                FROM arquivo AR JOIN avalia AV ON
+                SELECT *
+                FROM avalia AV JOIN (arquivo AR JOIN usuario US ON 
+                    US.identificador = AR.identificador)ON
                     AR.identificador = AV.identificador_criador
                 ORDER BY nota DESC;
                 SQL;
