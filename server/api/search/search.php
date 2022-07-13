@@ -11,7 +11,7 @@
 
     $sql = <<<SQL
                 SELECT * FROM arquivo
-                WHERE nome LIKE :pattern
+                WHERE titulo LIKE :pattern
                 ORDER BY data DESC;
                 SQL;
 
