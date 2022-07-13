@@ -6,17 +6,18 @@
     $arquivos = array();
 
     $text = $_GET["text"] ?? "";
+    $pattern = '%' . $text . '%';
 
 
     $sql = <<<SQL
                 SELECT * FROM arquivo
-                WHERE nome LIKE ?
+                WHERE nome LIKE :pattern
                 ORDER BY data DESC;
                 SQL;
 
     if($text != ""){
         $stmt = $pdo->prepare($sql);
-        $stmt->execute(["'%".$text."%'"]);
+        $stmt->execute([':pattern' => $pattern]);
 
         while($row = $stmt->fetch()){
             $arquivos[] = $row;
