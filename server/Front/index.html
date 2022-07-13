@@ -34,13 +34,23 @@
 
         .quadros {
             margin: auto;
+            padding-bottom: 1%;
         }
 
         .exemplo {
             height: 165px;
             width: 220px;
-            background-color: darkviolet;
+            background-color: blue;
             padding: 2%;
+        }
+
+        .file {
+            text-decoration: none;
+            color: azure;
+        }
+
+        .file:hover {
+            color: azure;
         }
     </style>
 
@@ -57,6 +67,7 @@
             <form class="d-flex">
                 <input class="form-control m-2" type="text" placeholder="Pesquisa">
             </form>
+
             <a href="login.html">
                 <button type="button" class="btn btn-light" id="login-btn"> Login </button>
             </a>
@@ -86,18 +97,21 @@
                         </div>
 
                         <div class="quadros col-sm-3 border border-2 border-dark">
-                            <h4>user1</h4>
-                            <h5>Título do File</h5>
-                            <div class="exemplo m-auto border border-1 border-dark"></div>
-                            <div class="col">
-                                <h6>Votos: Número</h6>
-                            </div>
-                            <div class="col">
-                                <h6>Downloads: Número</h6>
-                            </div>
-                            <div class="col">
-                                <h6>Comentários: Número</h6>
-                            </div>
+
+                            <h4>user2</h4>
+                            <a class="file" href="pfile.html">
+                                <h5>Título do File</h5>
+                                <div class="exemplo m-auto border border-1 border-dark"></div>
+                                <div class="col">
+                                    <h6>Votos: Número</h6>
+                                </div>
+                                <div class="col">
+                                    <h6>Downloads: Número</h6>
+                                </div>
+                                <div class="col">
+                                    <h6>Comentários: Número</h6>
+                                </div>
+                            </a>
                         </div>
 
                         <div class="quadros col-sm-3 border border-2 border-dark">
@@ -224,7 +238,6 @@
 
                 </div>
             </div>
-            <br><br><br><br>
         </div>
     </main>
     <footer>

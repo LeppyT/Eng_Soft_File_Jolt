@@ -1,6 +1,7 @@
 body {
     margin: 0 auto;
     padding: 0%;
+    background: #444;
 }
 
 nav {
@@ -19,6 +20,7 @@ nav img {
 main {
     background: #444;
     padding-top: 5%;
+    margin-bottom: 7%;
 }
 
 #files {
@@ -33,7 +35,9 @@ main {
     background-color: #222;
     color: azure;
     font-weight: bolder;
-    padding: 1%;
-    bottom: 0;
+    position: fixed;
+    left: 0%;
+    bottom: 0%;
+    padding: 0.5%;
     width: 100%;
 }
