@@ -3,7 +3,7 @@
     let template = document.querySelector('#file-display')
 
     let dataSearch = async type => {
-        let response = await fetch(`${baseURL}/api/featured/featured.php?feature-type=${type}`, { mode: "no-cors" })
+        let response = await fetch(`${baseURL}/api/featured/featured.php?feature-type=${type}`)
         if (!response.ok) {
             console.log('Chamada sem sucesso')
             return
@@ -24,8 +24,8 @@
         h4.textContent = data['identificador']
         h5.textContent = data['titulo']
         h6[0].textContent = `Votos: ${123}`
-        h6[0].textContent = `Downloads: ${data['qtd_downloads']}`
-        h6[0].textContent = `Comentários: ${456}`
+        h6[1].textContent = `Downloads: ${data['qtd_downloads']}`
+        h6[2].textContent = `Comentários: ${456}`
         return display
     }
 
