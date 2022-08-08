@@ -9,17 +9,17 @@
     $arquivos = array();
 
     $username = $_POST["username"] ?? "";
-    $file = $_POST["file"] ?? "";
+    //$file = $_POST["file"] ?? "";
     $nome = $_POST["nome"] ?? "";
-    $descricao = $_POST["descricao"] ?? "";
+    /*$descricao = $_POST["descricao"] ?? "";
     $titulo = $_POST["titulo"] ?? "";
-    $qtd_downloads = 0;
+    $qtd_downloads = 0;*/
 
     // Checking whether file exists or not
     if (!file_exists($target_dir . $username . '/' . $nome)) {
     
         // Create a new file or direcotry
-        mkdir($file_path, 0777, true);
+        mkdir($target_dir . $username . '/' . $nome, 0777, true);
 
         $arquivos[] =  "Given file path successfully created";
     }
