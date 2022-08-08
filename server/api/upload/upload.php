@@ -19,7 +19,6 @@
     /*$descricao = $_GET["descricao"] ?? "";
     $titulo = $_GET["titulo"] ?? "";
     $qtd_downloads = 0;*/
-    $flag = 0;
 
     // Checking whether file exists or not
     if (!file_exists($target_dir . $username . '/' . $nome)) {
@@ -59,31 +58,28 @@
             break;
         }
         if($i == 10){
-            $flag = 1;
-            $arquivos[] =  "Max version value achieved.";
-        }
-    }
-
-    if($flag){
-        $files = glob($target_dir.'/1/*'); 
+            $files = glob($target_dir.'/1/*'); 
    
-        // Deleting all the files in the list
-        foreach($files as $file) {
-        
-            if(is_file($file)) 
+            // Deleting all the files in the list
+            foreach($files as $file) {
             
-                // Delete the given file
-                unlink($file);
-        }
+                if(is_file($file)) 
+                
+                    // Delete the given file
+                    unlink($file);
+            }
 
-        // removing directory using rmdir()
-        if(rmdir($target_dir.'/1'))
-        {
-        echo ("$target_dir /1 successfully removed");
-        }
-        else
-        {
-        echo ($target_dir.'/1' . "couldn't be removed"); 
+            // removing directory using rmdir()
+            if(rmdir($target_dir.'/1'))
+            {
+                $arquivos[] = $target_dir . "/1 successfully removed";
+            }
+            else
+            {
+                $arquivos[] = $target_dir.'/1' . "couldn't be removed"; 
+            }
+            
+            $i = 9;
         }
     }
 
