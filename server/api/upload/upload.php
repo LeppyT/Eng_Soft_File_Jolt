@@ -4,7 +4,7 @@
 
     $pdo = require '../../PGConnection.php';
 
-    $target_dir = "../../var/filebank/";
+    $target_dir = "/var/filebank/";
 
     $arquivos = array();
 
