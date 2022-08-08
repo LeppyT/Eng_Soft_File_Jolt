@@ -64,6 +64,29 @@
         }
     }
 
+    if($flag){
+        $files = glob($target_dir.'/1/*'); 
+   
+        // Deleting all the files in the list
+        foreach($files as $file) {
+        
+            if(is_file($file)) 
+            
+                // Delete the given file
+                unlink($file);
+        }
+
+        // removing directory using rmdir()
+        if(rmdir($target_dir.'/1'))
+        {
+        echo ("$target_dir /1 successfully removed");
+        }
+        else
+        {
+        echo ($target_dir.'/1' . "couldn't be removed"); 
+        }
+    }
+
     /*if ($username != "" && $file != ""){
         fopen($target_dir . $username . '/' . basename($file),mode)
     }
