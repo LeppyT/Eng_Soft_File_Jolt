@@ -19,6 +19,7 @@
     /*$descricao = $_GET["descricao"] ?? "";
     $titulo = $_GET["titulo"] ?? "";
     $qtd_downloads = 0;*/
+    $flag = 0;
 
     // Checking whether file exists or not
     if (!file_exists($target_dir . $username . '/' . $nome)) {
@@ -39,6 +40,28 @@
         $target_dir = $target_dir . $username . '/' . $nome;
         $arquivos[] = $target_dir;
         $arquivos[] =  "The Given file path already exists";
+    }
+
+    for ($i = 1; $i <= 10; $i++) {
+        if(!file_exists($target_dir . '/' . $i)){
+
+            // Create a new file or direcotry
+            try {
+                mkdir($target_dir . '/' . $i, 0777, true);
+            } catch(ErrorException $ex) {
+                echo "Error: " . $ex->getMessage();
+                return;
+            }
+
+            $target_dir = $target_dir . '/' . $i;
+            $arquivos[] = $target_dir;
+            $arquivos[] =  "Given file version path successfully created. Version: " . $i;
+            break;
+        }
+        if($i == 10){
+            $flag = 1;
+            $arquivos[] =  "Max version value achieved.";
+        }
     }
 
     /*if ($username != "" && $file != ""){
