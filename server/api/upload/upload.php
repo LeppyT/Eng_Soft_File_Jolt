@@ -21,6 +21,7 @@
     $qtd_downloads = 0;*/
 
     // Checking whether file exists or not
+echo $target_dir . $username . '/' . $nome;
     if (!file_exists($target_dir . $username . '/' . $nome)) {
     
         // Create a new file or direcotry
