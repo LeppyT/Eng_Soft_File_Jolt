@@ -8,9 +8,14 @@
 
     $arquivos = array();
 
-    $username = $_POST["username"] ?? "";
+    if (!array_key_exists("username", $_GET) || !array_key_exists("nome", $_GET)) {
+        http_response_code(400);
+        return;
+    }
+
+    $username = $_GET["username"] ?? "";
     //$file = $_POST["file"] ?? "";
-    $nome = $_POST["nome"] ?? "";
+    $nome = $_GET["nome"] ?? "";
     /*$descricao = $_POST["descricao"] ?? "";
     $titulo = $_POST["titulo"] ?? "";
     $qtd_downloads = 0;*/
