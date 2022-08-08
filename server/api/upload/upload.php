@@ -36,6 +36,7 @@
         $arquivos[] =  "Given file path successfully created";
     }
     else {
+        $target_dir = $target_dir . $username . '/' . $nome;
         $arquivos[] = $target_dir;
         $arquivos[] =  "The Given file path already exists";
     }
