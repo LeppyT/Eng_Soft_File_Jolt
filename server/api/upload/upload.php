@@ -64,11 +64,13 @@
    
             // Deleting all the files in the list
             foreach($files as $file) {
-            
-                if(is_file($file)) 
-                
+
+                $arquivos[] = "File successfully removed";
+
+                if(is_file($file)){
                     // Delete the given file
                     unlink($file);
+                }
             }
 
             // removing directory using rmdir()
@@ -78,15 +80,21 @@
             }
             else
             {
-                $arquivos[] = $target_dir.'/1' . "couldn't be removed"; 
+                $arquivos[] = $target_dir . "/1 couldn't be removed"; 
             }
 
             for ($j = 1; $j <= 9; $j++) {
-                rename($target_dir.'/'.($j+1), $target_dir.'/'.$j);
-                $arquivos[] =  "File " . $target_dir . '/' . ($j+1) . " was renamed to " . $target_dir . '/' . $j;
+                if(rename($target_dir.'/'.($j+1), $target_dir.'/'.$j))
+                { 
+                    echo "Successfully Renamed $target_dir/" . ($j+1) . "to $target_dir/" . $j;
+                }
+                else
+                {
+                    echo "A File With The Same Name Already Exists" ;
+                }
             }
             
-            $i = 9;
+            $i--;
         }
     }
 
