@@ -57,7 +57,9 @@
             $arquivos[] =  "Given file version path successfully created. Version: " . $i;
             break;
 
-        }else if($i == 10){
+        }
+        
+        if($i == 10){
             $files = glob($target_dir.'/1/*'); 
    
             // Deleting all the files in the list
@@ -81,7 +83,7 @@
 
             for ($j = 1; $j <= 9; $j++) {
                 rename($target_dir.'/'.($j+1), $target_dir.'/'.$j);
-                $arquivos[] =  "File " . $target_dir . '/' . $j . " was renamed to " . $target_dir . '/' . ($j+1);
+                $arquivos[] =  "File " . $target_dir . '/' . ($j+1) . " was renamed to " . $target_dir . '/' . $j;
             }
             
             $i = 9;
