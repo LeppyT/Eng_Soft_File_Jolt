@@ -86,7 +86,7 @@
             for ($j = 1; $j <= 9; $j++) {
                 if(rename($target_dir.'/'.($j+1), $target_dir.'/'.$j))
                 { 
-                    echo "Successfully Renamed $target_dir/" . ($j+1) . "to $target_dir/" . $j;
+                    echo " Successfully Renamed $target_dir/" . ($j+1) . " to $target_dir/" . $j;
                 }
                 else
                 {
