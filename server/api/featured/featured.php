@@ -8,7 +8,8 @@
     $type = $_GET["feature-type"] ?? "";
 
     $sql_time = <<<SQL
-                SELECT * FROM arquivo
+                SELECT a.*, u.nome as user
+                FROM arquivo a JOIN usuario u on a.identificador = u.identificador
                 ORDER BY data DESC;
                 SQL;
 
