@@ -14,7 +14,6 @@
     }
 
     $username = $_GET["username"] ?? "";
-    //$file = $_GET["file"] ?? "";
     $nome = $_GET["nome"] ?? "";
     /*$descricao = $_GET["descricao"] ?? "";
     $titulo = $_GET["titulo"] ?? "";
@@ -96,6 +95,15 @@
             
             $i--;
         }
+    }
+
+    if( $_FILES['file']['name'] != "" ) {
+        $path = $_FILES['file']['name'];
+        $pathto= $target_dir . "/" . $path;
+        move_uploaded_file( $_FILES['file']['tmp_name'],$pathto) or die( "Could not copy file!");
+    }
+    else {
+        die("No file specified!");
     }
 
     /*if ($username != "" && $file != ""){
