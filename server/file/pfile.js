@@ -25,5 +25,6 @@
     modify('#user', data["user"])
     modify('#description', data["descricao"])
     document.querySelector("#capa").src = `${baseURL}/api/fileimage?username=${data["username"]}&nome=${data["nome"]}`
+    document.querySelector("#downloadb") = `${baseURL}/api/download/download.php?username=${data["username"]}&nome=${data["nome"]}`
 
 })()
