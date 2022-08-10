@@ -42,7 +42,25 @@
         }
     }
 
-    $attachment_location = $target_dir . "/*";
+    $files = glob($target_dir.'/*'); 
+    foreach($files as $file) {
+
+        if (file_exists($file)) {
+
+            header($_SERVER["SERVER_PROTOCOL"] . " 200 OK");
+            header("Cache-Control: public"); // needed for internet explorer
+            //header("Content-Type: application/zip");
+            header("Content-Transfer-Encoding: Binary");
+            header("Content-Length:".filesize($file));
+            header("Content-Disposition: attachment;");
+            readfile($file);
+            die();        
+        } else {
+            die("Error: File not found.");
+        }
+    }
+
+    /*$attachment_location = $target_dir . "/*";
     if (file_exists($attachment_location)) {
 
         header($_SERVER["SERVER_PROTOCOL"] . " 200 OK");
@@ -55,7 +73,7 @@
         die();        
     } else {
         die("Error: File not found.");
-    } 
+    }*/
 
     /*if ($username != "" && $file != ""){
         fopen($target_dir . $username . '/' . basename($file),mode)
