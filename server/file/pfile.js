@@ -17,7 +17,6 @@
     }
 
     let data = (await dataSearch())[0];
-    console.log(data)
 
     modify('#downloads', data["qtd_downloads"])
     modify('#votes', '456')
