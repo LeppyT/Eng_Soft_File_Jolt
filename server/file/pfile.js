@@ -16,7 +16,7 @@
         votes.textContent = new_content
     }
 
-    let data = await dataSearch()[0];
+    let data = (await dataSearch())[0];
     console.log(data)
 
     modify('#downloads', data["qtd_downloads"])
