@@ -53,7 +53,7 @@
             header("Content-Transfer-Encoding: Binary");
             header("Content-Length:".filesize($file));
             header("Content-Disposition: attachment;");
-            header("filename=\"" . basename($nome) . "\"")
+            header("filename=\"" . basename($nome) . "\"");
             readfile($file);
             die();        
         } else {
