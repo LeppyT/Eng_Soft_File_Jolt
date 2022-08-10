@@ -24,8 +24,8 @@
         data = type[number]
         h4.textContent = data['user']
         h5.textContent = data['titulo']
-        /*if (data["username"])
-            img.src = `http://eds.wellingtoncesar.com.br/api/fileimage?username=${data["username"]}&nome=${data["nome"]}`*/
+        if (data["username"])
+            img.src = `http://eds.wellingtoncesar.com.br/api/fileimage?username=${data["username"]}&nome=${data["nome"]}`
         h6[0].textContent = `Votos: ${123}`
         h6[1].textContent = `Downloads: ${data['qtd_downloads']}`
         h6[2].textContent = `Comentários: ${456}`
