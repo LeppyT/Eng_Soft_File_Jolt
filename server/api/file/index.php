@@ -17,7 +17,7 @@
                 SELECT a.*, u.nome as "user", u.username as username
                 FROM arquivo a
                          JOIN usuario u on a.identificador = u.identificador
-                where a.nome = ':name' and u.username = ':user';
+                where a.nome = :name and u.username = :user;
                 SQL;
 
         //$stmt = $pdo->query($sql_time);
