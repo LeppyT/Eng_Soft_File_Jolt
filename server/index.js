@@ -21,7 +21,7 @@
         let h5 = display.querySelector('h5')
         let h6 = display.querySelectorAll('h6')
         data = type[number]
-        h4.textContent = data['identificador']
+        h4.textContent = data['user']
         h5.textContent = data['titulo']
         h6[0].textContent = `Votos: ${123}`
         h6[1].textContent = `Downloads: ${data['qtd_downloads']}`
