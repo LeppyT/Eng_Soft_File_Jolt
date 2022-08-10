@@ -21,7 +21,7 @@
                 SQL;
 
         //$stmt = $pdo->query($sql_time);
-        $stmt = $pdo->prepeare($sql_time);
+        $stmt = $pdo->prepare($sql_time);
         $stmt->bindParam(':name', $nome);
         $stmt->bindParam(':user', $username);
         $stmt->execute();
