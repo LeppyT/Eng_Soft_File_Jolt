@@ -25,6 +25,8 @@
 
         h5 {
             text-align: center;
+            color: azure;
+            text-decoration: none;
         }
 
         h6 {
@@ -38,10 +40,10 @@
         }
 
         .exemplo {
-            height: 165px;
-            width: 220px;
-            background-color: blue;
+            border-color: #222;
+            background-color: #222;
             padding: 2%;
+            margin: 0 auto;
         }
 
         .file {
@@ -51,6 +53,10 @@
 
         .file:hover {
             color: azure;
+        }
+
+        .test {
+            text-decoration: none;
         }
     </style>
 
@@ -77,15 +83,17 @@
     <main>
         <div class="container">
 
-            <div class="row">  
+            <div class="row">
                 <div class="files col-sm-11 m-auto p-4 border border-3 border-dark" id="files">
                     <h2>Files mais votados:</h2>
                     <div class="row" id="votes">
                         <template id="file-display">
                             <div class="quadros col-sm-3 border border-2 border-dark">
                                 <h4>user1</h4>
-                                <a href="pfile.html"><h5>Título do File</h5></a>
-                                <div class="exemplo m-auto border border-1 border-dark"></div>
+                                <a href="pfile.html" class="test">
+                                    <h5>Título do File</h5>
+                                </a>
+                                <img src="_img/img-smp.jpg" class="exemplo img-thumbnail mt-2" alt="Img">
                                 <div class="col">
                                     <h6>Votos: Número</h6>
                                 </div>
