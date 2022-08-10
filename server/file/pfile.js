@@ -17,13 +17,12 @@
     }
 
     let data = await dataSearch();
-    console.log(data)
-    return
 
     modify('#downloads', data["qtd_downloads"])
     modify('#votes', '456')
     modify('#title', data["titulo"])
     modify('#user', data["user"])
     modify('#description', data["descricao"])
+    document.querySelector("#capa").src = `${baseURL}/api/fileimage?username=${data["username"]}&nome=${data["nome"]}`
 
 })()
