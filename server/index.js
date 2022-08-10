@@ -17,6 +17,7 @@
 
     makeDisplay = async (type, number) => {
         let display = template.content.cloneNode(true)
+        let img = display.querySelector('img')
         let h4 = display.querySelector('h4')
         let h5 = display.querySelector('h5')
         let h6 = display.querySelectorAll('h6')

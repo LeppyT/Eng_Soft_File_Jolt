@@ -8,19 +8,19 @@
     $type = $_GET["feature-type"] ?? "";
 
     $sql_time = <<<SQL
-                SELECT a.*, u.nome as user
+                SELECT a.*, u.nome as user, u.username as username
                 FROM arquivo a JOIN usuario u on a.identificador = u.identificador
                 ORDER BY a.data DESC;
                 SQL;
 
     $sql_downloads = <<<SQL
-                    SELECT a.*, u.nome as user
+                    SELECT a.*, u.nome as user, u.username as username
                     FROM arquivo a JOIN usuario u on a.identificador = u.identificador
                     ORDER BY a.qtd_downloads DESC;
                     SQL;
 
     $sql_votes = <<<SQL
-                SELECT AR.*, US.nome as user
+                SELECT AR.*, US.nome as user, u.username as username
                 FROM avalia AV
                          JOIN (arquivo AR JOIN usuario US ON
                     US.identificador = AR.identificador) ON
