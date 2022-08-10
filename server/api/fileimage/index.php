@@ -28,7 +28,7 @@
         return;
     }
 
-    $files = glob($target_dir.'/capa'); 
+    $files = glob($target_dir.'/capa/'); 
     foreach($files as $file) {
 
         if (file_exists($file)) {
