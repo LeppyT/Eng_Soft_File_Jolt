@@ -7,7 +7,7 @@
     <title>File Jolt</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link href="_css/estilo.css" rel="stylesheet">
+    <link href="../_css/estilo.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -112,20 +112,20 @@
     <nav class="navbar navbar-expanded">
         <div class="container-fluid">
 
-            <a class="navbar-brand p-20" href="index.html" alt="Logo File Jolt">
-                <img src="_img/logo1.png" />
+            <a class="navbar-brand p-20" href="../" alt="Logo File Jolt">
+                <img src="../_img/logo1.png" />
             </a>
 
             <form class="d-flex">
                 <div class="form-group mx-2">
                     <input class="form-control" type="text" placeholder="Pesquisa">
                 </div>
-                <a href="busca.html">
+                <a href="../busca">
                     <button type="button" class="btn btn-light m-auto" id="pesqisa-btn"> Pesquisar </button>
                 </a>
             </form>
 
-            <a href="login.html">
+            <a href="../login">
                 <button type="button" class="btn btn-light" id="login-btn"> Login </button>
             </a>
         </div>
@@ -141,7 +141,7 @@
                             <h2>Seus files:</h2>
                         </div>
                         <div class="col-6">
-                            <a class="file" href="cfile.html">
+                            <a class="file" href="../criararquivo/">
                                 <h2 class="cfile">Criar um novo file</h2>
                             </a>
                         </div>
@@ -160,14 +160,14 @@
                                 <h6>Comentários: Número</h6>
                             </div>
                             <div class="col">
-                                <a class="file" href="mfile.html">
+                                <a class="file" href="../modificararquivo/">
                                     <h6 class="alt">Alterar File</h6>
                                 </a>
                             </div>
                         </div>
 
                         <div class="quadros col-sm-3 border border-2 border-dark">
-                            <a class="file" href="pfile.html">
+                            <a class="file" href="../file">
                                 <h5>Título do File</h5>
                                 <div class="exemplo m-auto border border-1 border-dark"></div>
                                 <div class="col">
@@ -181,7 +181,7 @@
                                 </div>
                             </a>
                             <div class="col">
-                                <a class="file" href="mfile.html">
+                                <a class="file" href="../modificararquivo/">
                                     <h6 class="alt">Alterar File</h6>
                                 </a>
                             </div>
@@ -200,7 +200,7 @@
                                 <h6>Comentários: Número</h6>
                             </div>
                             <div class="col">
-                                <a class="file" href="mfile.html">
+                                <a class="file" href="../modificararquivo/">
                                     <h6 class="alt">Alterar File</h6>
                                 </a>
                             </div>
