@@ -20,7 +20,7 @@
                     SQL;
 
     $sql_votes = <<<SQL
-                SELECT AR.*, US.nome
+                SELECT AR.*, US.nome as user
                 FROM avalia AV
                          JOIN (arquivo AR JOIN usuario US ON
                     US.identificador = AR.identificador) ON
