@@ -1,8 +1,9 @@
 (async () => {
     let baseURL = 'https://eds.wellingtoncesar.com.br'
+    const urlParams = new URLSearchParams(location.search)
 
     let dataSearch = async () => {
-        let response = await fetch(`${baseURL}/api/featured/featured.php?feature-type=${type}`)
+        let response = await fetch(`${baseURL}/api/file?nome=${urlParams.get("nome")}&username=${urlParams.get("user")}`)
         if (!response.ok) {
             console.log('Chamada sem sucesso')
             return
@@ -15,10 +16,14 @@
         votes.textContent = new_content
     }
 
-    modify('#downloads', '123')
+    let data = await dataSearch();
+    console.log(data)
+    return
+
+    modify('#downloads', data["qtd_downloads"])
     modify('#votes', '456')
-    modify('#title', 'Título')
-    modify('#user', 'maria')
-    modify('#description', 'abc')
+    modify('#title', data["titulo"])
+    modify('#user', data["user"])
+    modify('#description', data["descricao"])
 
 })()
