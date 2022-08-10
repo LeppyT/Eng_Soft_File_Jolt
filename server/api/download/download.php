@@ -52,8 +52,7 @@
             //header("Content-Type: application/zip");
             header("Content-Transfer-Encoding: Binary");
             header("Content-Length:".filesize($file));
-            header("Content-Disposition: attachment;");
-            header("filename=\"" . basename($nome) . "\"");
+            header('Content-Disposition: attachment; filename="' . $nome . '"');
             readfile($file);
             die();        
         } else {
