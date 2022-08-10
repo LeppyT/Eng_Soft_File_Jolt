@@ -52,7 +52,7 @@
             //header("Content-Type: application/zip");
             header("Content-Transfer-Encoding: Binary");
             header("Content-Length:".filesize($file));
-            header('Content-Disposition: attachment; filename="' . $nome . '"');
+            header('Content-Disposition: attachment; filename="' . $file . '"');
             readfile($file);
             die();        
         } else {
